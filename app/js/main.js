@@ -26,12 +26,12 @@ gulp.task("scripts", function() {
 	.pipe(gulp.dest("app/js"));
 });
 
-gulp.task("css-libs", ["sass"], function() {
-	return gulp.src("app/css/libs.css")
-		.pipe(cssnano())
-		.pipe(rename({suffix: ".min"}))
-		.pipe(gulp.dest("app/css"));
-})
+// gulp.task("css-libs", ["sass"], function() {
+// 	return gulp.src("app/css/libs.css")
+// 		.pipe(cssnano())
+// 		.pipe(rename({suffix: ".min"}))
+// 		.pipe(gulp.dest("app/css"));
+// })
 
 gulp.task("browser-sync", function() {
 	browserSync({
@@ -61,7 +61,7 @@ gulp.task("img", function() {
 		.pipe(gulp.dest("dist/images"));
 });
 
-gulp.task("watch", ["browser-sync", "css-libs", "scripts"], function() {
+gulp.task("watch", ["browser-sync", "sass", "scripts"], function() {
 	gulp.watch("app/sass/**/*.sass", ["sass"]);
 	gulp.watch("app/*.html", browserSync.reload);
 	gulp.watch("app/js/**/*.js", browserSync.reload);

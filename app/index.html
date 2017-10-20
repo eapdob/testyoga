@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/fonts.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -17,9 +16,9 @@
 			<div class="header__left">
 				<nav class="leftNav">
 					<ul class="menu">
-						<li class="menu__item active"><a href="#">About Us</a></li>
-						<li class="menu__item"><a href="#">Reservation</a></li>
-						<li class="menu__item"><a href="#">Gallery</a></li>
+						<li class="menu__item active"><a href="#aboutUs">About Us</a></li>
+						<li class="menu__item"><a href="#reservation">Reservation</a></li>
+						<li class="menu__item"><a href="#gallery">Gallery</a></li>
 					</ul>
 				</nav>
 				<a href="#" class="logo"></a>
@@ -27,9 +26,9 @@
 			<div class="header__right">
 				<div class="rightNav">
 					<ul class="menu">
-						<li class="menu__item"><a href="#">Blog</a></li>
-						<li class="menu__item"><a href="#">Elements</a></li>
-						<li class="menu__item"><a href="#">Shop</a></li>
+						<li class="menu__item"><a href="#program">Blog</a></li>
+						<li class="menu__item"><a href="#feature">Elements</a></li>
+						<li class="menu__item"><a href="#price">Shop</a></li>
 					</ul>
 				</div>
 			</div>
@@ -37,17 +36,17 @@
 	</header>
 	<section class="hero">
 		<div class="container">
-			<form action="#">
+			<form action="#" id="heroForm">
 				<h3>Trial Class</h3>
 				<input type="text" name="name" placeholder="Enter your name">
-				<input type="text" name="phone" placeholder="Enter your phone">
+				<input type="tel" name="phone" placeholder="Enter your phone">
 				<select name="class">
 					<option value="" disabled selected>Choose your class</option> 
 					<option value="class1">Class 1</option> 
 					<option value="class2">Class 2</option>
 					<option value="class3">Class 3</option>
 				</select>
-				<button type="submit">Try it</button>
+				<button>Try it</button>
 			</form>
 			<div class="hero__textContainer">
 				<h1>Just balance 
@@ -59,7 +58,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="program">
+	<section class="program" id="program">
 		<div class="container">
 			<h2>Yoga Feature Program</h2>
 			<p>Our classes</p>
@@ -115,7 +114,7 @@
 			</ul>
 		</div>
 	</section>
-	<section class="gallery">
+	<section class="gallery" id="gallery">
 		<ul class="clearfix">
 			<li>
 				<a href="#">
@@ -167,7 +166,7 @@
 			</li>
 		</ul>
 	</section>
-	<section class="aboutUs">
+	<section class="aboutUs" id="aboutUs">
 		<div class="container">
 			<div class="sliderAboutUs owl-carousel">
 				<div class="sliderItem">
@@ -206,7 +205,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="feature">
+	<section class="feature" id="feature">
 		<div class="container">
 			<ul class="clearfix">
 				<li class="featureItem">
@@ -275,7 +274,7 @@
 			</ul>
 		</div>
 	</section>
-	<section class="price">
+	<section class="price" id="price">
 		<div class="container">
 			<ul>
 				<li class="priceItem">
@@ -379,7 +378,7 @@
 			</div>
 		</div>
 	</section>
-	<footer class="footer">
+	<footer class="footer" id="reservation">
 		<div class="footer__top">
 			<div class="container">
 				<div class="footer__about">

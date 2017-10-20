@@ -55,13 +55,13 @@ gulp.task("clear", function() {
 
 gulp.task("img", function() {
 	return gulp.src("app/images/**/*")
-		.pipe(cache(imagemin({
-			interlaced: true,
+		.pipe(imagemin({
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
-			une: [pngquant()]
-		})))
-		.pipe(gulp.dest("dist/images"));
+			use: [pngquant()],
+			interlaced: true
+		}))
+		.pipe(gulp.dest("dist/images"))
 });
 
 gulp.task("watch", ["browser-sync", "css-libs", "scripts"], function() {
@@ -74,6 +74,8 @@ gulp.task("build", ["clean", "img", "css-libs", "scripts"], function() {
 	var buildCss = gulp.src([
 			"app/css/main.css", 
 			"app/css/libs.min.css",
+			"app/css/fonts.css",
+			"app/css/base.css"
 		])
 		.pipe(gulp.dest("dist/css"));
 

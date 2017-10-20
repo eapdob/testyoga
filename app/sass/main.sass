@@ -14,6 +14,7 @@ body
 	left: 0
 	width: 100%
 	padding: 25px 0
+	border-bottom: 1px solid rgba(0, 0, 0, .1)
 	color: $textColor
 	background-color: $mainColor
 	.container
@@ -151,3 +152,60 @@ body
 				font-size: 40px
 				font-family: "FreestyleScriptRegular", sans-serif
 				white-space: pre-line
+
+/* program */
+
+.program
+	padding: 125px 0
+	color: $textColor
+	background-color: $mainColor
+	h2
+		margin: 0 0 25px
+		color: $accentColor
+		font-size: 30px
+		font-family: "MyriadProRegular", sans-serif
+		text-transform: uppercase
+		text-align: center
+	p
+		margin: 0 0 78px
+		font-size: 40px
+		font-family: "FreestyleScriptRegular", sans-serif
+		text-align: center
+	.programList
+		padding: 0
+		margin: 0
+		list-style-type: none
+		.programList__item
+			float: left
+			width: 50%
+			margin-bottom: 25px
+			font-size: 0
+			&:nth-child(3),
+			&:nth-child(4)
+				margin-bottom: 0
+			.program__img
+				display: inline-block
+				width: 50%
+				vertical-align: top
+				img
+					display: block
+					width: 100%
+					height: auto
+			.program__description
+				display: inline-block
+				width: 50%
+				vertical-align: top
+				h6
+					margin: 50px 14px 36px 30px
+					font-size: 20px
+					font-family: "Open Sans", sans-serif
+					font-weight: 700
+					text-transform: uppercase
+				p
+					margin: 0 48px 18px 30px
+					font-size: 14px
+					font-family: "Open Sans", sans-serif
+					text-align: left
+				.author
+					margin-bottom: 78px
+					color: #999

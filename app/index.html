@@ -6,10 +6,59 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	
+	<header class="header">
+		<div class="container">
+			<div class="header__left">
+				<nav class="leftNav">
+					<ul class="menu">
+						<li class="menu__item active"><a href="#">About Us</a></li>
+						<li class="menu__item"><a href="#">Reservation</a></li>
+						<li class="menu__item"><a href="#">Gallery</a></li>
+					</ul>
+				</nav>
+				<a href="#" class="logo"></a>
+			</div>
+			<div class="header__right">
+				<div class="rightNav">
+					<ul class="menu">
+						<li class="menu__item"><a href="#">Blog</a></li>
+						<li class="menu__item"><a href="#">Elements</a></li>
+						<li class="menu__item"><a href="#">Shop</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="hero">
+		<div class="container">
+			<form action="#" class="hero__form">
+				<h3>Trial Class</h3>
+				<input type="text" name="name" placeholder="Enter your name">
+				<input type="text" name="phone" placeholder="Enter your phone">
+				<select name="class">
+					<option value="" disabled selected>Choose your class</option> 
+					<option value="class1">Class 1</option> 
+					<option value="class2">Class 2</option>
+					<option value="class3">Class 3</option>
+				</select>
+				<button type="submit">Try it</button>
+			</form>
+			<div class="hero__textContainer">
+				<h1>Just balance 
+					your mind & body
+				</h1>
+				<p>Create the healthy living 
+					for yourself
+				</p>
+			</div>
+		</div>
+	</section>
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

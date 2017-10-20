@@ -1,0 +1,23 @@
+*
+	box-sizing: border-box
+
+.container
+	width: 1170px
+	padding: 0 15px
+	margin: 0 auto
+	&::after
+		display: table
+		content: ""
+		clear: both
+
+.clearfix
+	&::after
+		display: table
+		content: ""
+		clear: both
+
+.left
+	float: left
+
+.right
+	float: right

@@ -1,0 +1,153 @@
+$mainColor: #fff
+$accentColor: #5363db
+$textColor: #555555
+
+body
+	background-color: $textColor
+	font-family: "Open Sans", sans-serif
+
+/* header */
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	padding: 25px 0
+	color: $textColor
+	background-color: $mainColor
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 0 150px
+	.header__left
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 50%
+		.logo
+			display: block
+			width: 68px
+			height: 68px
+			margin-right: -34px
+			background: $mainColor url(../images/logo.png) no-repeat center center
+			background-size: cover
+	.menu
+		padding: 0
+		margin: 0
+		list-style-type: none
+		.menu__item
+			display: inline-block
+			padding: 19px 0 21px
+			margin-right: 30px
+			&:last-child
+				margin-right: 0
+			&:hover
+				a
+					color: $accentColor
+					&::after
+						width: 100%
+						opacity: 1
+			a
+				color: $textColor
+				font-size: 14px
+				font-weight: 600
+				text-decoration: none
+				transition: all .3s ease
+				&::after
+					display: block
+					content: ""
+					width: 0
+					height: 1px
+					margin-top: 6px
+					opacity: 0
+					background-color: $accentColor
+		.menu__item.active
+			a
+				color: $accentColor
+				&::after
+					width: 100%
+					opacity: 1
+	.header__right
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		width: 50%
+		.menu
+			margin: 0 50px 0 0
+
+/* hero */
+
+.hero
+	width: 100%
+	margin-top: 118px
+	padding: 100px 0 108px
+	background: $accentColor url(../images/slider_bg.jpg) no-repeat center center
+	background-size: cover
+	.container
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0 150px
+		form
+			border-radius: 15px
+			background-color: $mainColor
+			h3
+				margin: 41px 144px 30px 30px
+				font-size: 26px
+				font-weight: 600
+				color: $accentColor
+			input,
+			select
+				display: block
+				width: 230px
+				height: 50px
+				padding: 18px 10px 19px
+				margin: 0 40px 17px 30px
+				border: none
+				border-radius: 5px
+				outline: none
+				color: $textColor
+				background-color: #f2f2f2
+				font-size: 14px
+			select
+				padding: 15px 10px
+				margin-bottom: 31px
+				appearance: none
+				background: #f2f2f2 url(../images/select_arrow.png) no-repeat 194px 0
+			button
+				display: block
+				width: 170px
+				height: 50px
+				border: 1px solid transparent
+				border-radius: 5px
+				outline: none
+				margin: 0 40px 36px 65px
+				color: $mainColor
+				background-color: $accentColor
+				font-size: 16px
+				font-weight: 700
+				transition: all .3s ease
+				&:hover
+					cursor: pointer
+					border: 1px solid $accentColor
+					color: $accentColor
+					background-color: $mainColor
+		.hero__textContainer
+			margin: 94px 0 94px 75px
+			h1
+				margin: 0 0 30px
+				color: $mainColor
+				font-size: 48px
+				font-family: "MyriadProRegular", sans-serif
+				font-weight: 500
+				text-transform: uppercase
+				white-space: pre-line
+				line-height: 1.5
+			p
+				margin: 0
+				color: $mainColor
+				font-size: 40px
+				font-family: "FreestyleScriptRegular", sans-serif
+				white-space: pre-line

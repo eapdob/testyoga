@@ -12,6 +12,7 @@ body
 	position: fixed
 	top: 0
 	left: 0
+	z-index: 2
 	width: 100%
 	padding: 25px 0
 	border-bottom: 1px solid rgba(0, 0, 0, .1)
@@ -94,6 +95,7 @@ body
 		form
 			border-radius: 15px
 			background-color: $mainColor
+			box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 15px 5px
 			h3
 				margin: 41px 144px 30px 30px
 				font-size: 26px
@@ -141,8 +143,7 @@ body
 				margin: 0 0 30px
 				color: $mainColor
 				font-size: 48px
-				font-family: "MyriadProRegular", sans-serif
-				font-weight: 500
+				font-family: "Open Sans", sans-serif
 				text-transform: uppercase
 				white-space: pre-line
 				line-height: 1.5
@@ -163,7 +164,7 @@ body
 		margin: 0 0 25px
 		color: $accentColor
 		font-size: 30px
-		font-family: "MyriadProRegular", sans-serif
+		font-family: "Open Sans", sans-serif
 		text-transform: uppercase
 		text-align: center
 	p
@@ -203,9 +204,396 @@ body
 					text-transform: uppercase
 				p
 					margin: 0 48px 18px 30px
+					line-height: 1.5
 					font-size: 14px
 					font-family: "Open Sans", sans-serif
 					text-align: left
 				.author
-					margin-bottom: 78px
+					margin-bottom: 43px
 					color: #999
+
+/* gallery */
+
+.gallery
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			float: left
+			width: 25%
+			a
+				position: relative
+				display: block
+				background-color: $accentColor
+				&:hover
+					img
+						filter: grayscale(100%)
+						opacity: .4
+					span
+						opacity: 1
+
+				img
+					display: block
+					width: 100%
+					height: auto
+					transition: all .3s ease
+				span
+					position: absolute
+					top: 50%
+					left: 50%
+					width: 57px
+					height: 57px
+					transform: translate(-50%, -50%)
+					line-height: 57px
+					border-radius: 50%
+					box-shadow: rgba(0, 0, 0, .1) 4px 2px 6px 4px
+					background-color: $mainColor
+					font-size: 24px
+					text-align: center
+					opacity: 0
+					transition: all .2s ease
+
+/* about us */
+
+.aboutUs
+	padding: 125px 0
+	background-color: $mainColor
+	.sliderAboutUs
+		.owl-prev
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			margin-top: -25px
+			margin-left: -25px
+			background: url(../images/arrow_left.png) no-repeat center center
+			background-size: cover
+			box-shadow: rgba(0, 0, 0, .1) 4px 2px 4px 1px
+		.owl-next
+			position: absolute
+			top: 50%
+			right: 0
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			margin-top: -25px
+			margin-right: -25px
+			background: url(../images/arrow_right.png) no-repeat center center
+			background-size: cover
+			box-shadow: rgba(0, 0, 0, .1) 4px 2px 4px 1px
+	.sliderItem
+		font-size: 0
+		.sliderItem__description
+			display: inline-block
+			width: 50%
+			vertical-align: top
+			h2
+				margin: 25px 0
+				color: $accentColor
+				font-size: 30px
+				text-transform: uppercase
+				text-align: left
+			p
+				margin: 0 134px 90px 0
+				line-height: 1.5
+				color: $textColor
+				font-size: 14px
+				text-align: left
+		.sliderItem__img
+			display: inline-block
+			width: 50%
+			vertical-align: top
+			img
+				display: block
+				width: 100%
+				height: auto
+				border-radius: 5px
+
+/* feature */
+
+.feature
+	padding: 125px 0
+	color: $mainColor
+	background: $accentColor url(../images/feature_bg.jpg) no-repeat center center
+	background-size: cover
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		.featureItem
+			float: left
+			width: 25%
+			margin-bottom: 25px
+			text-align: center
+			&:nth-child(5)
+				h6
+					margin-bottom: 53px
+			img
+				max-width: 100%
+				height: auto
+				margin-bottom: 34px
+			h6
+				margin: 0 0 28px
+				line-height: 1.4
+				font-size: 18px
+				text-transform: uppercase
+				white-space: pre-line
+			p
+				margin: 0 0 10px
+				font-size: 16px
+
+/* price */
+
+.price
+	padding: 100px 0 165px
+	background: #fff url(../images/price_bg.jpg) no-repeat 0 100px
+	background-size: cover
+	ul
+		padding: 0
+		margin: 0 -15px 105px
+		list-style-type: none
+		font-size: 0
+		.priceItem
+			display: inline-block
+			width: 33.3333%
+			padding: 0 15px
+			.priceItem__header
+				border: 1px solid transparent
+				border-top-left-radius: 10px
+				border-top-right-radius: 10px
+				background-color: $accentColor
+				text-align: center
+				box-shadow: rgba(0, 0, 0, .1) 4px 2px 4px 1px
+				transition: all .3s ease
+				h6
+					padding: 50px 0
+					margin: 0
+					font-size: 68px
+					color: $mainColor
+					span
+						margin: 0 20px 0 7px
+						font-size: 24px
+						font-weight: 700
+						text-transform: uppercase
+						vertical-align: middle
+					span:nth-child(2)
+						vertical-align: bottom
+			.priceItem__content
+				padding: 50px 70px
+				border: 1px solid transparent
+				border-bottom-left-radius: 10px
+				border-bottom-right-radius: 10px
+				text-align: left
+				background-color: $mainColor
+				box-shadow: rgba(0, 0, 0, .1) 4px 2px 4px 1px
+				transition: all .3s ease
+				p
+					margin: 0 0 50px
+					font-size: 18px
+					color: $textColor
+					text-transform: uppercase
+				button
+					display: block
+					padding: 16px 50px
+					margin: 0 auto
+					border-radius: 20px
+					color: $mainColor
+					background-color: $accentColor
+					font-size: 18px
+					font-weight: 600
+					border: 1px solid $accentColor
+					outline: none
+					transition: all .3s ease
+					&:hover
+						cursor: pointer
+						color: $accentColor
+						background-color: $mainColor
+	.sliderReview
+		.owl-prev
+			position: absolute
+			top: 85%
+			left: 23%
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			margin-top: -25px
+			margin-left: -25px
+			background: url(../images/arrow_left.png) no-repeat center center
+			background-size: cover
+			box-shadow: rgba(0, 0, 0, .1) 4px 2px 4px 1px
+		.owl-next
+			position: absolute
+			top: 85%
+			left: 45%
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			margin-top: -25px
+			margin-right: -25px
+			background: url(../images/arrow_right.png) no-repeat center center
+			background-size: cover
+			box-shadow: rgba(0, 0, 0, .1) 4px 2px 4px 1px
+		.reviewItem
+			display: flex
+			justify-content: space-around
+			align-items: center
+			width: 99%
+			margin-bottom: 50px
+			border-radius: 15px
+			background-color: $mainColor
+			box-shadow: rgba(0, 0, 0, .1) 4px 2px 4px 1px
+			.reviewItem__img
+				display: block
+				width: 21.79%
+				height: auto
+				padding: 11px
+				border: 2px solid #d7d7d7
+				margin: 65px 46px
+				border-radius: 50%;
+			.reviewItem__content
+				position: relative
+				&::before
+					position: absolute
+					bottom: 75px
+					left: 0
+					content: ""
+					width: 2px
+					height: 72px
+					background-color: #d7d7d7
+				span
+					&:first-child
+						position: absolute
+						top: 50px
+						left: 0
+						width: 21px
+						height: 15px
+						background: url(../images/quotes_open.png) no-repeat center center
+						background-size: cover
+					&:nth-child(2)
+						position: absolute
+						bottom: 125px
+						right: 150px
+						width: 21px
+						height: 15px
+						background: url(../images/quotes_closed.png) no-repeat center center
+						background-size: cover
+				p
+					margin: 50px 228px 36px 44px
+					line-height: 1.5
+					color: $textColor
+					font-size: 14px
+					font-style: italic
+					text-align: left
+				.reviewItem__author
+					p
+						margin-top: 0
+						margin-bottom: 0
+						font-style: normal
+						&:nth-child(2)
+							margin-bottom: 72px
+							color: $accentColor
+							font-weight: 700
+				.reviewControls
+					display: flex
+					justify-content: space-around
+					align-items: center
+					position: absolute
+					top: 100%
+					left: 10%
+					margin-top: -32px
+					img
+						width: 40%
+						height: auto
+						border: 2px solid #dadada
+						border-radius: 50%
+					.reviewControls__title
+						width: 60%
+						p
+							margin: 0 0 0 26px
+							font-size: 14px
+							font-style: normal
+							color: $textColor
+							line-height: 1.5
+							&:nth-child(1)
+								font-weight: 700
+
+/* footer */
+
+.footer
+	color: $mainColor
+	.footer__top
+		padding: 100px 0 104px
+		background-color: #5b6ceb
+		.container
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.footer__about
+				width: 50%
+				text-align: left
+				h3
+					margin: 0 0 61px
+					font-size: 18px
+					text-transform: uppercase
+				p
+					margin: 0 116px 72px 0
+					line-height: 1.5
+					font-size: 14px
+				.socialList
+					padding: 0
+					margin: 0
+					list-style-type: none
+					.socialList__item
+						float: left
+						margin-right: 26px
+						&:last-child
+							margin-right: 18px
+						a
+							span
+								font-size: 21px
+								color: $mainColor
+			.footer__contact
+				width: 50%
+				text-align: left
+				h3
+					margin: -24px 0 61px
+					font-size: 18px
+					text-transform: uppercase
+				.contactList
+					padding: 0
+					margin: 0
+					list-style-type: none
+					font-size: 0
+					.contactList__item
+						display: inline-block
+						width: 50%
+						margin-bottom: 31px
+						span
+							display: inline-block
+							margin-right: 16px
+							font-size: 21px
+							vertical-align: middle
+						div
+							display: inline-block
+							vertical-align: middle
+						p
+							margin: 0
+							line-height: 1.5
+							font-size: 14px
+						a
+							display: inline-block
+							font-size: 14px
+							color: $mainColor
+							text-decoration: none
+
+	.footer__bottom
+		padding: 40px 0
+		background-color: #5363d8
+		p
+			margin: 0
+			color: #b7bffc
+			font-size: 16px
+			text-align: center

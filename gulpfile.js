@@ -20,7 +20,9 @@ gulp.task("sass", function() {
 });
 
 gulp.task("scripts", function() {
-	return gulp.src("app/libs/jquery/dist/jquery.min.js")
+	return gulp.src([
+		"app/libs/jquery/dist/jquery.min.js",
+		"app/libs/owl.carousel/dist/owl.carousel.min.js"])
 	.pipe(concat("libs.min.js"))
 	.pipe(uglify())
 	.pipe(gulp.dest("app/js"));
